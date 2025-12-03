@@ -79,6 +79,24 @@
 
 # Решение 6
 
+#!/bin/bash
+
+case "$1" in
+    1)
+        echo "Игонин В.А."
+        ;;
+    2)
+        date '+%Y-%m-%d %H:%M:%S'
+        ;;
+    *)
+        echo "Invalid parameter"
+        exit 1
+        ;;
+esac
+
+
+
+
 # Задание 7* со звёздочкой
 Доработайте Python-скрипт из лекции, создайте для него UserParameter и прикрепите его к созданному вами ранее шаблону. Скрипт должен:
 
@@ -94,6 +112,31 @@
 
 # Решение 7
 
+#!/usr/bin/env python3
+import sys
+import os
+import re
+from datetime import datetime
+
+def get_fio():
+    return "Игонин В.А."
+def get_current_date():
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+if (sys.argv[1] == '-ping'): # Если -ping
+    result=os.popen("ping -c 1 " + sys.argv[2]).read() # Делаем пинг по заданному адресу
+    result=re.findall(r"time=(.*) ms", result) # Выдёргиваем из результата время
+    print(result[0]) # Выводим результат в консоля
+elif (sys.argv[1] == '-simple_print'): # Если simple_print
+    print(sys.argv[2]) # Выводим в консоль содержимое sys.arvg[2]
+elif (sys.argv[1] == '1'): # Если 1
+    print(get_fio()) # Возвращает ФИО
+elif (sys.argv[1] == '2'): #Если 2, то вычисляет текущую
+    print(get_current_date()) # Выводим в консоль результат
+else: # Во всех остальных случаях
+    print(f"unknown input: {sys.argv[1]}") # Выводим непонятый запрос в консоль
+
+
 # Задание 8* со звёздочкой
 Настройте автообнаружение и прикрепление к хостам созданного вами ранее шаблона.
 
@@ -107,4 +150,5 @@
 
 **Требования к результату**
  Приложите в GitHub файлы Vagrantfile и zabbix-agent.sh.*
+
 
