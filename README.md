@@ -14,23 +14,24 @@
 
 # Решение 1
 
-# Задание 2
+<details> 
+
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/1.png)  
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/1.2.png)
+
+</details>   
+
+# Задание 2 и Задание 3
 Добавьте в Zabbix два хоста и задайте им имена <фамилия и инициалы-1> и <фамилия и инициалы-2>. Например: ivanovii-1 и ivanovii-2.
 
-  1. Процесс выполнения
-  2. Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
-  3. Установите Zabbix Agent на 2 виртмашины, одной из них может быть ваш Zabbix Server
-  4. Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов
-  5. Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera
-  6. Прикрепите за каждым хостом шаблон Linux by Zabbix Agent
-  7. Проверьте что в разделе Latest Data начали появляться данные с добавленных агентов
+  **Процесс выполнения**
+  1. Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
+  2. Установите Zabbix Agent на 2 виртмашины, одной из них может быть ваш Zabbix Server
+  3. Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов
+  4. Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera
+  5. Прикрепите за каждым хостом шаблон Linux by Zabbix Agent
+  6. Проверьте что в разделе Latest Data начали появляться данные с добавленных агентов
 
-**Требования к результату**
- Результат данного задания сдавайте вместе с заданием 3
-
-# Решение 2
-
-# Задание 3
 Привяжите созданный шаблон к двум хостам. Также привяжите к обоим хостам шаблон Linux by Zabbix Agent.
 
 **Процесс выполнения**
@@ -40,7 +41,14 @@
   4. Проверьте что в раздел Latest Data начали поступать необходимые данные из вашего шаблона
 **Требования к результату**
  Прикрепите в файл README.md скриншот страницы хостов, где будут видны привязки шаблонов с названиями «Задание 2-3». Хосты должны иметь зелёный статус подключения
+
 # Решение 3
+<details> 
+  
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/2.png)  
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/3.png)  
+
+</details>
 
 # Задание 4
 Создайте свой кастомный дашборд.
@@ -55,6 +63,12 @@
  
 # Решение 4
 
+<details> 
+  
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/4.png) 
+
+</details>
+
 # Задание 5* со звёздочкой
 Создайте карту и расположите на ней два своих хоста.
 
@@ -68,6 +82,13 @@
 
 # Решение 5
 
+<details> 
+  
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/5.png)
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/5.1.png)
+
+</details>
+
 # Задание 6* со звёздочкой
 Создайте UserParameter на bash и прикрепите его к созданному вами ранее шаблону. Он должен вызывать скрипт, который:
 
@@ -78,7 +99,9 @@
  Прикрепите в файл README.md код скрипта, а также скриншот Latest data с результатом работы скрипта на bash, чтобы был виден результат работы скрипта при отправке в него 1 и 2
 
 # Решение 6
-
+<details> 
+ 
+  ```bash
 #!/bin/bash
 
 case "$1" in
@@ -93,8 +116,11 @@ case "$1" in
         exit 1
         ;;
 esac
+  ```
 
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/6.png)
 
+</details>
 
 
 # Задание 7* со звёздочкой
@@ -111,7 +137,9 @@ esac
  Прикрепите в файл README.md код скрипта в Git. Приложите в Git скриншот Latest data с результатом работы скрипта на Python, чтобы были видны результаты работы скрипта при отправке в него 1, 2, -ping, а также -simple_print.*
 
 # Решение 7
+<details> 
 
+  ```python3
 #!/usr/bin/env python3
 import sys
 import os
@@ -135,7 +163,12 @@ elif (sys.argv[1] == '2'): #Если 2, то вычисляет текущую
     print(get_current_date()) # Выводим в консоль результат
 else: # Во всех остальных случаях
     print(f"unknown input: {sys.argv[1]}") # Выводим непонятый запрос в консоль
+  ```
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/7.png)
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/7.1.png)
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/7.1.1.png)
 
+</details>
 
 # Задание 8* со звёздочкой
 Настройте автообнаружение и прикрепление к хостам созданного вами ранее шаблона.
@@ -145,10 +178,18 @@ else: # Во всех остальных случаях
 
  # Решение 8
 
+<details> 
+  
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/8.png)
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/8.2.png)
+
+</details>
+
 # Задание 9* со звёздочкой
 Доработайте скрипты Vagrant для 2-х агентов, чтобы они были готовы к автообнаружению сервером, а также имели на борту разработанные вами ранее параметры пользователей.
 
 **Требования к результату**
  Приложите в GitHub файлы Vagrantfile и zabbix-agent.sh.*
+
 
 
