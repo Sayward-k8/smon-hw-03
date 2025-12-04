@@ -187,6 +187,8 @@ else: # Во всех остальных случаях
   
 ![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/8.png)
 ![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/8.2.png)
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/8.1.png)
+![alt text](https://github.com/Sayward-k8/smon-hw-03/blob/main/image/8.3.png)
 
 </details>
 
@@ -195,6 +197,7 @@ else: # Во всех остальных случаях
 
 **Требования к результату**
  Приложите в GitHub файлы Vagrantfile и zabbix-agent.sh.*
+
 
 
 
